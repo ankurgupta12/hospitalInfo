@@ -1,0 +1,19 @@
+.bg-colr{
+    background-color: #498ed4 !important;
+}
+#logo{
+    display: initial;
+    /* font-weight: 500; */
+    /* font-size: 3.5rem; */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: rgb(253, 92, 99);
+    text-shadow: rgb(0 0 0 / 6%) 2px 5px 3px;
+    padding: 0px;
+}
+.menu-center{
+    justify-content: center;
+}
+.m-l{
+    margin-left: 2%;
+  }

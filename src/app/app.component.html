@@ -1,0 +1,182 @@
+<app-header></app-header>
+<!-- <router-outlet></router-outlet> -->
+
+<div class="row py-5">
+  <div class="column" *ngFor="let records of hosRecords?.hostpitalInfo">
+    <div class="card">
+      <button class="btn" (click)="edit(records, updatemodal)">
+        <i class="fas fa-edit" style="font-size: 20px"></i>
+      </button>
+
+      <p class="t-align">
+        <label class="fw">Center: </label>{{ records.hName }}
+      </p>
+      <p class="t-align">
+        <label class="fw">ICU Available : </label>{{ records.icuAvail }}
+      </p>
+      <p class="t-align" *ngIf="records.bedWithOxygenAvail == true">
+        <label class="fw">Oxygen Bed Availablity: </label>Yes
+      </p>
+      <p class="t-align" *ngIf="records.bedWithOxygenAvail == false">
+        <label class="fw">Oxygen Bed Availablity:</label>No
+      </p>
+      <p class="t-align">
+        <label class="fw">Ventilator Available: </label
+        >{{ records.ventilatorsAvail }}
+      </p>
+      <p class="t-align">
+        <label class="fw">BI-PAP Available: </label> {{ records.bipapAvail }}
+      </p>
+      <p class="t-align">
+        <label class="fw">HFNO Available: </label>{{ records.hfnoAvail }}
+      </p>
+      <button
+        class="btn btn-lg btn-outline-primary"
+        (click)="open(mymodal, records.teamDetail)"
+      >
+        Get Team Detail
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Team to connect</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of teamDetail">
+          <td>{{ member.name }}</td>
+          <td>{{ member.designation }}</td>
+          <td>{{ member.mob }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.close('Save click')"
+    >
+      Ok
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #updatemodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Hospital Information</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="first">ICU Available</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="icu beds"
+                name="first"
+                [(ngModel)]="updateInfo.icuAvail"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="company">Ventilators Available</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder=""
+                name="company"
+                [(ngModel)]="updateInfo.ventilatorsAvail"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!--  col-md-6   -->
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="phone">Bi-PAP Available</label>
+              <input
+                type="number"
+                class="form-control"
+                name="phone"
+                placeholder="Bi-PAP"
+                [(ngModel)]="updateInfo.bipapAvail"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="email">HFNO Available</label>
+              <input
+                type="number"
+                class="form-control"
+                name="email"
+                placeholder="email"
+                [(ngModel)]="updateInfo.hfnoAvail"
+              />
+            </div>
+          </div>
+          <!--  col-md-6   -->
+        </div>
+        <!--  row   -->
+        <!--  row   -->
+        <div class="checkbox">
+          <label>
+            <input
+              type="checkbox"
+              name="bedswithoxygen"
+              [(ngModel)]="updateInfo.bedWithOxygenAvail"
+              id="newsletter"
+            />
+            Oxygen Bed Availablity
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.close(updateInfo)"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<!-- <app-footer></app-footer> -->

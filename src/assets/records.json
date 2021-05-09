@@ -1,0 +1,51 @@
+{
+  "userCode": "12345",
+  "hostpitalInfo": [
+    {
+      "hName": "Abc healthCare",
+      "id": "1",
+      "icuAvail": 10,
+      "bedWithOxygenAvail": true,
+      "ventilatorsAvail": 15,
+      "bipapAvail": 12,
+      "hfnoAvail": "8",
+      "teamDetail": [
+        { "name": "Pranay", "designation": "Physican", "mob": " 8787895733" },
+        { "name": "Ankur", "designation": "Physican", "mob": " 8787895733" },
+        { "name": "Vaidehi", "designation": "Physican", "mob": " 8787895733" }
+      ]
+    },
+    {
+      "hName": "DEF healthCare",
+      "icuAvail": 0,
+      "id": "2",
+      "bedWithOxygenAvail": false,
+      "ventilatorsAvail": 1,
+      "bipapAvail": 0,
+      "hfnoAvail": 2,
+      "teamDetail": [
+        { "name": "Pranay", "designation": "Physican", "mob": " 8787895733" },
+        { "name": "Vaidehi", "designation": "Physican", "mob": " 8787895733" },
+        { "name": "Ankur", "designation": "Physican", "mob": " 8787895733" }
+      ]
+    },
+    {
+      "hName": "DEF healthCare",
+      "icuAvail": 0,
+      "id": "3",
+      "bedWithOxygenAvail": false,
+      "ventilatorsAvail": 1,
+      "bipapAvail": 0,
+      "hfnoAvail": 2,
+      "teamDetail": [
+        { "name": "Falaane", "designation": "Physican", "mob": " 8787895733" },
+        {
+          "name": "Dhekane",
+          "designation": "Specialist",
+          "mob": " 8787895733"
+        },
+        { "name": "Thikane", "designation": "Arthro", "mob": " 8787895733" }
+      ]
+    }
+  ]
+}
