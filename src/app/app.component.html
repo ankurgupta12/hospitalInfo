@@ -4,8 +4,9 @@
 <div class="row py-5">
   <div class="column" *ngFor="let records of hosRecords?.hostpitalInfo">
     <div class="card">
-      <button class="btn" (click)="edit(records, updatemodal)">
-        <i class="fas fa-edit" style="font-size: 20px"></i>
+      <button class="btn editBtn" (click)="edit(records, updatemodal)">
+        <i class="fas fa-edit" style="font-size: 15px;
+    font-weight: normal;"></i>
       </button>
 
       <p class="t-align">
@@ -15,7 +16,7 @@
         <label class="fw">ICU Available : </label>{{ records.icuAvail }}
       </p>
       <p class="t-align" *ngIf="records.bedWithOxygenAvail == true">
-        <label class="fw">Oxygen Bed Availablity: </label>Yes
+        <label class="fw">Oxygen Availablity: </label>Yes
       </p>
       <p class="t-align" *ngIf="records.bedWithOxygenAvail == false">
         <label class="fw">Oxygen Bed Availablity:</label>No

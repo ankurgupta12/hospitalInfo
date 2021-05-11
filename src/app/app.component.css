@@ -3,11 +3,16 @@
   float: left;
   width: 25%;
   padding: 0 10px;
+      /*flex: 1 0 21%;*/
+    /*margin: 5px;*/
+    /*height: 100px;*/
 }
 
 /* Remove extra left and right margins, due to padding */
 .row {
   margin: 0 -5px;
+ /* display: flex;
+    flex-wrap: wrap;*/
 }
 
 /* Clear floats after the columns */
@@ -28,25 +33,35 @@
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
+  box-shadow: 0 0px 2px 0 rgb(0 0 0 / 20%);
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
 }
 
 .fw {
   font-weight: 600;
 }
 .t-align {
-  text-align: left;
+      text-align: left;
+    font-size: 12px;
+    line-height: 17px;
+        margin-bottom: 0.3rem;
 }
 .btn {
   background-color: DodgerBlue; /* Blue background */
   border: none; /* Remove borders */
   color: white; /* White text */
-  padding: 12px 16px; /* Some padding */
-  font-size: 16px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
+      font-size: 13px;
+    cursor: pointer;
+    line-height: 11px;
+}
+.editBtn{
+      position: absolute;
+    right: 15px;
+    padding: 6px;
+    font-size: 8px;
+    background: #b9b9b9;
 }
 
 /* Darker background on mouse-over */
