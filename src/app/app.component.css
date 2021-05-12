@@ -10,7 +10,7 @@
 
 /* Remove extra left and right margins, due to padding */
 .row {
-  margin: 0 -5px;
+  margin: 10px -5px;
  /* display: flex;
     flex-wrap: wrap;*/
 }

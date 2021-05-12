@@ -26,3 +26,10 @@
     color: rgb(255 255 255);
     border-color: rgb(255 255 255);
     background: white;}
+.navbar-brand {
+    font-size: 1rem;
+}
+.navbar {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    }
